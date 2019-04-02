@@ -36,6 +36,107 @@
         </div>
 
     </div>
+    <body>
+        <form  id="cas" class="box" style="font: 15px arial, sans-serif;">
+            <div class="slds-grid slds-wrap slds-form">
+                <div class="slds-size--1-of-2 slds-form-element slds-p-horizontal--small">
+                    <label class="slds-form-element__label" for="journeyName" style="margin-right: 0.15rem;">Journey Name</label>
+                    <div id="photo_container" style="display: inline-block;">
+                            <a href="#"><img src="images/information_icon.png" alt="Text">
+                                <span style="top:-20px;left:20px;">Hint: A Journey Name must match the name of the journey in which this decision split activity is used.</span></a>
+                            </div>
+                    <div class="slds-form-element__control">
+                        <input type="text" id="journeyName" placeholder="Please Enter" class="slds-input" />
+                    </div>
+                </div>
+                
+                
+                <div class="slds-size--1-of-2 slds-form-element slds-p-horizontal--small">
+                    <label class="slds-form-element__label" for="dataExtensionName" style="margin-right: 0.15rem;">
+                            <abbr class="slds-required" title="required">* </abbr>Data Extension Name
+                        </label>
+                        <div id="photo_container" style="display: inline-block;">
+                                <a href="#"><img src="images/information_icon.png" alt="Text">
+                                    <span style="top:-20px;left:20px;">Hint: Please provide a name of the Data Extension which is related to the NCL (Non Card Lending) Card Members. All others will not be relevant for the OTB Amount check.</span></a>
+                                </div>
+                    <div class="slds-form-element__control">
+        
+                        <input type="text"  id="dataExtensionName" placeholder="Please Enter" class="slds-input" required />
+        
+                                            </div>
+                </div>
+                
+                
+                <div class="slds-size--1-of-1 slds-p-horizontal--small slds-m-top--small">
+                    <div class="slds-grid slds-wrap condition-box" >
+                        <div>
+                                <input id="CAS_check_variable" readonly="" class="slds-input" type="text" value="OTB Amount" />
+                        </div>
+                        
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col check">
+                            <select id="CAS_check_operand">
+                                <option value="gt">&gt;</option>
+                                <option value="lt">&lt;</option>
+                                <option value="gte">&gt;=</option>
+                                <option value="lte">&lt;=</option>
+                                <option value="equals">=</option>
+                                <option value="between">Between</option>
+                            </select>
+                        </div>
+                    
+                        <!--Tooltip icon-->
+                        
+                        <div id="photo_container" class="slds-col tooltip" style="padding-left: 10px;">                         <a href="#"><img src="images/information_icon.png" alt="Text">
+                                <span>Hint: Selected operator will determine the "True" path. If a contact doesn't fall into the set threshold, they will follow the "Failed" path. Any contacts with invalid data will fall under "Remainder" path.</span></a>
+                            </div>
+                        </div>
+                        <!--Tooltip ends-->
+                        <div class="slds-grid slds-wrap">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col threshold min">
+                                    <abbr class="slds-required" title="required">* </abbr>
+                                <input type="number" id="CAS_check_min_value" placeholder="Min Threshold" min="0" required="true" message="you can give score -10 to +10 only" onpaste='return false' onkeypress='return event.charCode>=48 && event.charCode<=57'/>
+                            </div>
+                            <div class="slds-col threshold max">
+                                    <abbr class="slds-required" title="required">* </abbr>
+                                <input type="number" id="CAS_check_max_value" placeholder="Max Threshold" min="0" required="true" onpaste='return false' onkeypress='return event.charCode>=48 && event.charCode<=57'/>
+                            </div>
+                        </div>
+                            <!--Tooltip icon-->
+                        
+                            <div id="photo_container" style="padding-left:5px;">
+                                <a href="#"><img src="images/information_icon.png" alt="Text">
+                                    <span>Hint: Type a dollar amount with which you want to compare contact's OTB level</span></a>
+                                </div>
+                            </div>
+                            <!--Tooltip ends-->
+                        <div>
+                                <select id="CAS_currency" style="width:75px;" >
+                                        <!--  <option value=""  hidden>Currency</option> -->
+                                            <option value="$" default>$</option>
+                                </select>
+                            </div>
+                            
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <br/>
+        <br/>
+        <h1>Please enter all the required fields.</h1>
+        <br/>
+        <button id="okbtn" style="float: right;">Continue Configuration</button>
+        </div>
+        
+        </div>
 </body>
 
 </html>

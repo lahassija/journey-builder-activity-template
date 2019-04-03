@@ -86,16 +86,15 @@ exports.execute = function (req, res) {
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
-            
             logData(req);
             res.send(200, 'Execute');
+
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
         }
     });
 };
-
 
 /*
  * POST Handler for /publish/ route of Activity.

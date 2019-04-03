@@ -56,6 +56,32 @@
     "wizardSteps": [
         { "label": "Configure Activity", "key": "step1" }
     ],
+    "outcomes": [
+    {
+      "arguments": {
+        "branchResult": "true"
+      },
+      "metaData": {
+        "label": "True"
+      }
+    },
+    {
+      "arguments": {
+        "branchResult": "false"
+      },
+      "metaData": {
+        "label": "False"
+      }
+    },
+      {
+      "arguments": {
+        "branchResult": "Remainder"
+      },
+      "metaData": {
+        "label": "Remainder"
+      }
+    }
+  ],
     "userInterfaces": {
         "configModal": {
             "height": 400,

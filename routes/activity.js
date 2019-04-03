@@ -87,7 +87,8 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             logData(req);
-            res.send(200, 'Execute');
+            console.log("=decodedArgs=" + JSON.stringify(decodedArgs));
+            return res.json({ branchResult: "True" }); 
 
         } else {
             console.error('inArguments invalid.');

@@ -67,37 +67,21 @@ define([
 
     function save() {
         console.log("save called");
-        var journeyName = $('#journeyName').val(),
-        dataExtensionName = $('#dataExtensionName').val(),
-        attributeGroupName = $('#attributeGroupName').val(),
-        subscriberKey ="VoltageEncrypted",
-        CAS_check_variable = "OTB" ,
-        CAS_check_operand = $('#CAS_check_operand').val(),
-        CAS_check_min_value = $('#CAS_check_min_value').val(),
-        CAS_check_max_value = $('#CAS_check_max_value').val(),
-        currency = "USD",
-        region = "Market",
-        market = "Market",
-        updateKey="SubscriberKey"
-    // popup starts
-    // Get the modal
- 
-    //Popup ends        
-    console.log(payload);        
+        var dataExtensionName = $('#DEname').val(),
+        attribute1 = $('#attr1').val(),
+        attribute2 = $('#attr2').val(),
+        operator = $('#operator').val(),
+        operand = $('#operand').val(),
+        finalvalue = $('#fvalue').val()
+        console.log(dataExtensionName);
+        console.log(operator);
+        console.log(operand);     
+        console.log(payload);      
         payload['arguments'].execute.inArguments = [{
-        "subscriberKey": "{{Contact.Attribute."+ dataExtensionName + "." + subscriberKey+"}}",
-        "CAS_check_variable": CAS_check_variable,
-        "CAS_check_operand": CAS_check_operand,
-        "CAS_check_min_value": CAS_check_min_value,
-        "CAS_check_max_value": CAS_check_max_value,
-        "currencyCode": currency,
-        "countryCode" : "{{Contact.Attribute."+ dataExtensionName + "." + market+"}}",
-        "regionCode" : "{{Contact.Attribute."+ dataExtensionName + "." + region+"}}",
-        "Context": "{{Context}}",
-        "journeyDetails": "{{Context.VersionNumber}}",
-        "DefinitionId": "{{Context.DefinitionId}}",
-        "contactIdentifier": "{{Contact.Key}}",
-        "updateKey": "{{Contact.Attribute."+ dataExtensionName + "." + updateKey+"}}"           
+        "Attr1": "{{Contact.Attribute."+ dataExtensionName + "." + attribute1+"}}",
+        "Attr2": "{{Contact.Attribute."+ dataExtensionName + "." + attribute2+"}}",
+        "operator": operator,
+        "operand": operand           
     }];
 
     payload['metaData'].isConfigured = true;

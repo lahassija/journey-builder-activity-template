@@ -87,7 +87,8 @@ define([
     payload['metaData'].isConfigured = true;
     console.log("dataExtensionName value", JSON.stringify(dataExtensionName));
     console.log(JSON.stringify(payload));
-    if (dataExtensionName != ""  && isBlocked == false) {
+    if (dataExtensionName != "")
+    {
         connection.trigger('updateActivity', payload);
     }
     }

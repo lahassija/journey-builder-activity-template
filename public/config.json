@@ -33,22 +33,22 @@
     "configurationArguments": {
       "applicationExtensionKey": "P9owd3RwpdwWmAwCxb6YM0oRpr1xaW8XnrKjdK6VeyYgsKERnVvnHdgKcWYWrDQEGIUIKcA5_UVwVw_yMP3-GB16uuN8dyastZiZOohdYI0chF1sl2FF1-JsobnY8Nj8lU7MM-92d6-p-YvTR8FQwHvNrs5WIAiC_DuD2T28IT5DO_5_6ASUYX1ABFsv89G8THqDu_q9jh6t0N3-PLJ_HNtYXf-wVCt03mn2bfCgqjd_cBC5ts5ncwQObi7okw2",
       "save": {
-        "url": "https://journeyuilderapp.herokuapp.com/save",
+        "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://journeyuilderapp.herokuapp.com/publish",
+        "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://journeyuilderapp.herokuapp.com/stop",
+        "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://journeyuilderapp.herokuapp.com/validate",
+        "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/validate",
         "verb": "POST",
         "useJwt": true
       }

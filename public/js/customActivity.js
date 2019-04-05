@@ -85,7 +85,6 @@ define([
     }];
 
     payload['metaData'].isConfigured = true;
-    console.log("subscriberKey value", JSON.stringify(subscriberKey));
     console.log("dataExtensionName value", JSON.stringify(dataExtensionName));
     console.log(JSON.stringify(payload));
     if (dataExtensionName != ""  && isBlocked == false) {

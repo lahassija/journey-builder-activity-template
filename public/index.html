@@ -28,7 +28,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 input[type=text], select {
-  width: 100%;
+  width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -48,20 +48,20 @@ input[type=text], select {
 <body>
     <div class="container">
     <form action="#" METHOD="POST">
-        <label for="DEname">Data Extension Name:</label>
+        <label for="DEname">Data Extension Name:</label><br>
         <input type="text" placeholder="Enter DE Name" id="DEname"><br>
-        <label for="attr1">Attribute Name 1:</label>
+        <label for="attr1">Attribute Name 1:</label><br>
         <input type="text" placeholder="Enter Attribute 1" id="attr1"><br>
-        <label for="operator">Select the Operator:</label>
+        <label for="operator">Select the Operator:</label><br>
                 <select id="operator">
                                 <option value="plus">+</option>
                                 <option value="minus">-</option>
                                 <option value="multiply">*</option>
                                 <option value="divide">/</option>
                             </select><br>
-        <label for="attr2">Attribute Name 2:</label>
+        <label for="attr2">Attribute Name 2:</label><br>
         <input type="text" placeholder="Enter Attribute 2" id="attr2"><br>
-        <label for="operand">Select the Operand:</label>
+        <label for="operand">Select the Operand:</label><br>
                             <select id="operand">
                                 <option value="gt">&gt;</option>
                                 <option value="lt">&lt;</option>
@@ -69,7 +69,7 @@ input[type=text], select {
                                 <option value="lte">&lt;=</option>
                                 <option value="equals">=</option>
                             </select><br>
-        <label for="fvalue">Provide the Final Value to compare:</label>
+        <label for="fvalue">Provide the Final Value to compare:</label><br>
         <input type="text" placeholder="Final Value" id="fvalue"><br>                    
     </form>
     </div>

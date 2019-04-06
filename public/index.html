@@ -22,22 +22,46 @@
         })();
 
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
 </head>
 
 <body>
-
+    <div class="container">
     <form action="#" METHOD="POST">
-        <div>
+        <label for="DEname">Data Extension Name:</label>
         <input type="text" placeholder="Enter DE Name" id="DEname"><br>
+        <label for="attr1">Attribute Name 1:</label>
         <input type="text" placeholder="Enter Attribute 1" id="attr1"><br>
+        <label for="operator">Select the Operator:</label>
                 <select id="operator">
                                 <option value="plus">+</option>
                                 <option value="minus">-</option>
                                 <option value="multiply">*</option>
                                 <option value="divide">/</option>
                             </select><br>
+        <label for="attr2">Attribute Name 2:</label>
         <input type="text" placeholder="Enter Attribute 2" id="attr2"><br>
+        <label for="operand">Select the Operand:</label>
                             <select id="operand">
                                 <option value="gt">&gt;</option>
                                 <option value="lt">&lt;</option>
@@ -45,9 +69,10 @@
                                 <option value="lte">&lt;=</option>
                                 <option value="equals">=</option>
                             </select><br>
+        <label for="fvalue">Provide the Final Value to compare:</label>
         <input type="text" placeholder="Final Value" id="fvalue"><br>                    
     </form>
-
+    </div>
 </body>
 
 </html>

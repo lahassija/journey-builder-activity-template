@@ -2,7 +2,7 @@
     "workflowApiVersion": "1.1",
     "metaData": {
         "icon": "images/icon.png",
-        "iconSmall": "images/images.jpg",
+        "iconSmall": "images/iconSmall.jpg",
         "category": "flowcontrol"
     },
     "type": "REST",

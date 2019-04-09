@@ -74,12 +74,15 @@ define([
         operand = $('#operand').val(),
         finalvalue = $('#fvalue').val()
         console.log(dataExtensionName);
+        console.log(attribute1);
+        console.log(attribute2);
         console.log(operator);
-        console.log(operand);     
+        console.log(operand);   
         console.log(payload);      
         payload['arguments'].execute.inArguments = [{
         "Attr1": "{{Contact.Attribute."+ dataExtensionName + "." + attribute1+"}}",
         "Attr2": "{{Contact.Attribute."+ dataExtensionName + "." + attribute2+"}}",
+        "ContactKey": "{{Contact.Key}}",
         "operator": operator,
         "operand": operand           
     }];

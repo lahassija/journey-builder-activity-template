@@ -14,12 +14,12 @@
         }
     },
     "arguments": {
-        "execute": {       
-      "inArguments":[
-        { "attribute1":"{{Contact.Attribute.Sayan_Test_Custom_Activity.Attribute1}}"},
-        { "attribute2":"{{Contact.Attribute.Sayan_Test_Custom_Activity.Attribute2}}"},
-        { "emailAddress": "{{Contact.Default.EmailAddress}}"}              
-      ],
+        "execute": {
+           "inArguments":[
+				{
+                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
+                }									
+			],
           "outArguments": [],
           "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
@@ -96,4 +96,5 @@
                 "outArguments": []
             }
         }
-    } 
+    }
+}

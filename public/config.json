@@ -14,14 +14,14 @@
         }
     },
     "arguments": {
-        "execute": {
-           "inArguments":[
-				{
-                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
-                }									
-			],
+        "execute": {       
+      "inArguments":[
+        { "attribute1":"{{Contact.Attribute.Sayan_Test_Custom_Activity.Attribute1}}"},
+        { "attribute2":"{{Contact.Attribute.Sayan_Test_Custom_Activity.Attribute2}}"},
+        { "emailAddress": "{{Contact.Default.EmailAddress}}"}              
+      ],
           "outArguments": [],
-          "url": "https://herokuapp/journeybuilder/execute",
+          "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -96,5 +96,4 @@
                 "outArguments": []
             }
         }
-    }
-}
+    } 

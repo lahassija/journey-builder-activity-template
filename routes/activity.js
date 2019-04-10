@@ -175,8 +175,7 @@ console.log("==inexecute");
             }
 
             logData(req);
-            console.log("=decodedArgs=" + JSON.stringify(decodedArgs));
-            return res.json({ branchResult: "True" }); 
+            console.log("=decodedArgs=" + JSON.stringify(decodedArgs)); 
 
         } else {
             console.error('inArguments invalid.');

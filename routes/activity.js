@@ -90,75 +90,97 @@ console.log("==inexecute");
             attr2 = decodedArgs.Attr2,
             operator = decodedArgs.operator,
             operand = decodedArgs.operand,
-            fvalue = decodedArgs.fvalue;    
+            fvalue = decodedArgs.fvalue; 
             if (operator == "plus")
             {
-
+                console.log("IfBlock+");
                 var attr3 = attr1 +attr2;
+                console.log(attr3);
+
             }  
             if (operator == "minus")
             {
 
+                console.log("IfBlock-");
                 var attr3 = attr1 - attr2;
+                console.log(attr3);
             } 
             if (operator == "multiply")
             {
 
-                var attr3 = attr1*attr2;
+                console.log("IfBlock*");
+                var attr3 = attr1 * attr2;
+                console.log(attr3);
             } 
             if (operator == "divide")
             {
 
+                console.log("IfBlock/");
                 var attr3 = attr1/attr2;
+                console.log(attr3);
             }
             if (operand == "gt")
-            {
+
+            {   console.log("IfBlockGT");
                 if (attr3 > fvalue)
                 {
+                    console.log("IfBlockGTTrue");
                     return res.json({ branchResult: "True" });
                 }
                 else
                 {
+                console.log("IfBlockGTFalse");
                 return res.json({ branchResult: "False" });
                 }
             }
             if (operand == "lt")
             {
+                console.log("IfBlockLT");
                 if (attr3 < fvalue)
                 {
+                console.log("IfBlockLTTrue");    
                 return res.json({ branchResult: "True" });
                 }
                 else
                 {
+                console.log("IfBlockLTFalse");    
                 return res.json({ branchResult: "False" });
                 }
             }
             if (operand == "gte")
-            {
+            {   
+                console.log("IfBlockGte");
                 if (attr3 >= fvalue)
                 {
+                console.log("IfBlockGteTrue");    
                 return res.json({ branchResult: "True" });
                 }
                 else
                 {
+                console.log("IfBlockGteFalse");    
                 return res.json({ branchResult: "False" });
                 }
             }
             if (operand == "lte")
             {
+                console.log("IfBlockLte");
                 if (attr3 <= fvalue)
                 {
+                console.log("IfBlockLteTrue");    
                 return res.json({ branchResult: "True" });
                 }
                 else
                 {
+                console.log("IfBlockLteFalse");    
                 return res.json({ branchResult: "False" });
                 }
             }
             if (operand == "equals")
-            {
+            {   
+                console.log("IfBlockEquals");
                 if (attr3 == fvalue)
                 {
+                console.log("IfBlockEquals");    
                 return res.json({ branchResult: "Remainder" });
                 }
             }

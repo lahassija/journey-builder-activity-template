@@ -144,17 +144,6 @@ console.log("==inexecute");
                 return res.json({ branchResult: "False" });
                 }
             }
-            if (operand == "gte")
-            {
-                if (attr3 >= fvalue)
-                {
-                return res.json({ branchResult: "True" });
-                }
-                else
-                {
-                return res.json({ branchResult: "False" });
-                }
-            } 
             if (operand == "lte")
             {
                 if (attr3 <= fvalue)

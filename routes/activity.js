@@ -168,14 +168,14 @@ console.log("==inexecute");
             }
             if (operand == "equals")
             {
-                if (attr3 <= fvalue)
+                if (attr3 == fvalue)
                 {
                 return res.json({ branchResult: "Remainder" });
                 }
             }
 
             logData(req);
-            console.log("=decodedArgs=" + JSON.stringify(decodedArgs)); 
+            console.log("=decodedArgs=" + JSON.stringify(decodedArgs));
 
         } else {
             console.error('inArguments invalid.');

@@ -94,8 +94,8 @@ console.log("==inexecute");
             if (operator == "plus")
             {
                 console.log("IfBlock+");
-                console.log(parseInt(attr1)+parseInt(attr2));
-
+                var attr3 = parseInt(attr1)+parseInt(attr2);
+                console.log(attr3);
             }  
             if (operator == "minus")
             {

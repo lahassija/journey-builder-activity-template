@@ -84,7 +84,8 @@ define([
         "Attr2": "{{Contact.Attribute."+ dataExtensionName + "." + attribute2+"}}",
         "ContactKey": "{{Contact.Key}}",
         "operator": operator,
-        "operand": operand           
+        "operand": operand,
+        "fvalue": finalvalue          
     }];
 
     payload['metaData'].isConfigured = true;

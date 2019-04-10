@@ -86,6 +86,94 @@ console.log("==inexecute");
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
+            var attr1 = decodedArgs.Attr1,
+            attr2 = decodedArgs.Attr2,
+            operator = decodedArgs.operator,
+            operand = decodedArgs.operand,
+            fvalue = decodedArgs.fvalue;    
+            if (operator == "plus")
+            {
+
+                var attr3 = attr1 +attr2;
+            }  
+            if (operator == "minus")
+            {
+
+                var attr3 = attr1 - attr2;
+            } 
+            if (operator == "multiply")
+            {
+
+                var attr3 = attr1*attr2;
+            } 
+            if (operator == "divide")
+            {
+
+                var attr3 = attr1/attr2;
+            }
+            if (operand == "gt")
+            {
+                if (attr3 > fvalue)
+                {
+                    return res.json({ branchResult: "True" });
+                }
+                else
+                {
+                return res.json({ branchResult: "False" });
+                }
+            }
+            if (operand == "lt")
+            {
+                if (attr3 < fvalue)
+                {
+                return res.json({ branchResult: "True" });
+                }
+                else
+                {
+                return res.json({ branchResult: "False" });
+                }
+            }
+            if (operand == "gte")
+            {
+                if (attr3 >= fvalue)
+                {
+                return res.json({ branchResult: "True" });
+                }
+                else
+                {
+                return res.json({ branchResult: "False" });
+                }
+            }
+            if (operand == "gte")
+            {
+                if (attr3 >= fvalue)
+                {
+                return res.json({ branchResult: "True" });
+                }
+                else
+                {
+                return res.json({ branchResult: "False" });
+                }
+            } 
+            if (operand == "lte")
+            {
+                if (attr3 <= fvalue)
+                {
+                return res.json({ branchResult: "True" });
+                }
+                else
+                {
+                return res.json({ branchResult: "False" });
+                }
+            }
+            if (operand == "equals")
+            {
+                if (attr3 <= fvalue)
+                {
+                return res.json({ branchResult: "Remainder" });
+                }
+            }
+
             logData(req);
             console.log("=decodedArgs=" + JSON.stringify(decodedArgs));
             return res.json({ branchResult: "True" }); 

@@ -18,6 +18,7 @@
            "inArguments":[
 				{
                     "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
+                    
                 }									
 			],
           "outArguments": [],

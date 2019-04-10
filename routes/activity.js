@@ -94,7 +94,7 @@ console.log("==inexecute");
             if (operator == "plus")
             {
                 console.log("IfBlock+");
-                var attr3 = attr1 +attr2;
+                var attr3 = attr1 + attr2;
                 console.log(attr3);
 
             }  
@@ -125,7 +125,7 @@ console.log("==inexecute");
                 if (attr3 > fvalue)
                 {
                     console.log("IfBlockGTTrue");
-                    return res.json({ branchResult: "True" });
+                    return res.json({ branchResult: "False" });
                 }
                 else
                 {
@@ -139,7 +139,7 @@ console.log("==inexecute");
                 if (attr3 < fvalue)
                 {
                 console.log("IfBlockLTTrue");    
-                return res.json({ branchResult: "True" });
+                return res.json({ branchResult: "False" });
                 }
                 else
                 {
@@ -153,7 +153,7 @@ console.log("==inexecute");
                 if (attr3 >= fvalue)
                 {
                 console.log("IfBlockGteTrue");    
-                return res.json({ branchResult: "True" });
+                return res.json({ branchResult: "False" });
                 }
                 else
                 {
@@ -167,7 +167,7 @@ console.log("==inexecute");
                 if (attr3 <= fvalue)
                 {
                 console.log("IfBlockLteTrue");    
-                return res.json({ branchResult: "True" });
+                return res.json({ branchResult: "False" });
                 }
                 else
                 {
@@ -190,6 +190,7 @@ console.log("==inexecute");
 
         } else {
             console.error('inArguments invalid.');
+            return res.json({ branchResult: "Remainder" });
             return res.status(400).end();
         }
     });

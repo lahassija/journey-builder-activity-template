@@ -124,12 +124,12 @@ console.log("==inexecute");
                 if (attr3 > fvalue)
                 {
                     console.log("IfBlockGTTrue");
-                    res.json({ "branchResult": "true" });
+                    return res.json({ "branchResult": "true" });
                 }
                 else
                 {
                 console.log("IfBlockGTFalse");
-                res.json({ "branchResult": "false" });
+                return res.json({ "branchResult": "false" });
                 }
             }
             if (operand == "lt")
@@ -138,12 +138,12 @@ console.log("==inexecute");
                 if (attr3 < fvalue)
                 {
                 console.log("IfBlockLTTrue");    
-                res.json({ "branchResult": "true" });
+                return res.json({ "branchResult": "true" });
                 }
                 else
                 {
                 console.log("IfBlockLTFalse");    
-                res.json({ "branchResult": "false" });
+                return res.json({ "branchResult": "false" });
                 }
             }
             if (operand == "gte")
@@ -152,12 +152,12 @@ console.log("==inexecute");
                 if (attr3 >= fvalue)
                 {
                 console.log("IfBlockGteTrue");    
-                res.json({ "branchResult": "true" });
+                return res.json({ "branchResult": "true" });
                 }
                 else
                 {
                 console.log("IfBlockGteFalse");    
-                res.json({ "branchResult": "false"});
+                return res.json({ "branchResult": "false"});
                 }
             }
             if (operand == "lte")
@@ -166,12 +166,12 @@ console.log("==inexecute");
                 if (attr3 <= fvalue)
                 {
                 console.log("IfBlockLteTrue");    
-                res.json({ "branchResult": "true" });
+                return res.json({ "branchResult": "true" });
                 }
                 else
                 {
                 console.log("IfBlockLteFalse");    
-                res.json({ "branchResult": "false" });
+                return res.json({ "branchResult": "false" });
                 }
             }
             if (operand == "equals")
@@ -180,7 +180,7 @@ console.log("==inexecute");
                 if (attr3 == fvalue)
                 {
                 console.log("IfBlockEquals");    
-                res.json({ branchResult: "Remainder" });
+                return res.json({ branchResult: "Remainder" });
                 }
             }
 
@@ -189,8 +189,8 @@ console.log("==inexecute");
 
         } else {
             console.error('inArguments invalid.');
-            res.json({ branchResult: "Remainder" });
-            return res.status(400).end();
+            res.status(400).end();
+            return res.json({ branchResult: "Remainder" });
         }
     });
 };

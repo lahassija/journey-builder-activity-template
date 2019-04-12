@@ -124,12 +124,12 @@ console.log("==inexecute");
                 if (attr3 > fvalue)
                 {
                     console.log("IfBlockGTTrue");
-                    return res.json({ "branchResult": "true" });
+                    return res.json({ "branchResult": "True" });
                 }
                 else
                 {
                 console.log("IfBlockGTFalse");
-                return res.json({ "branchResult": "false" });
+                return res.json({ "branchResult": "False" });
                 }
             }
             if (operand == "lt")
@@ -138,12 +138,12 @@ console.log("==inexecute");
                 if (attr3 < fvalue)
                 {
                 console.log("IfBlockLTTrue");    
-                return res.json({ "branchResult": "true" });
+                return res.json({ "branchResult": "True" });
                 }
                 else
                 {
                 console.log("IfBlockLTFalse");    
-                return res.json({ "branchResult": "false" });
+                return res.json({ "branchResult": "False" });
                 }
             }
             if (operand == "gte")
@@ -152,12 +152,12 @@ console.log("==inexecute");
                 if (attr3 >= fvalue)
                 {
                 console.log("IfBlockGteTrue");    
-                return res.json({ "branchResult": "true" });
+                return res.json({ "branchResult": "True" });
                 }
                 else
                 {
                 console.log("IfBlockGteFalse");    
-                return res.json({ "branchResult": "false"});
+                return res.json({ "branchResult": "False"});
                 }
             }
             if (operand == "lte")
@@ -166,12 +166,12 @@ console.log("==inexecute");
                 if (attr3 <= fvalue)
                 {
                 console.log("IfBlockLteTrue");    
-                return res.json({ "branchResult": "true" });
+                return res.json({ "branchResult": "True" });
                 }
                 else
                 {
                 console.log("IfBlockLteFalse");    
-                return res.json({ "branchResult": "false" });
+                return res.json({ "branchResult": "False" });
                 }
             }
             if (operand == "equals")

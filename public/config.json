@@ -5,7 +5,7 @@
         "iconSmall": "images/iconSmall.jpg",
         "category": "flowcontrol"
     },
-    "type": "RestDecision",
+    "type": "RESTDECISION",
     "lang": {
         "en-US": {
             "name": "Mathematical Splitter",

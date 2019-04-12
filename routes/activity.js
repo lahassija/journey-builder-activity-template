@@ -180,7 +180,7 @@ console.log("==inexecute");
                 if (attr3 == fvalue)
                 {
                 console.log("IfBlockEquals");    
-                return res.json({ branchResult: "Remainder" });
+                return res.json({ "branchResult": "Remainder" });
                 }
             }
 
@@ -190,7 +190,7 @@ console.log("==inexecute");
         } else {
             console.error('inArguments invalid.');
             res.status(400).end();
-            return res.json({ branchResult: "Remainder" });
+            return res.json({ "branchResult": "Remainder" });
         }
     });
 };

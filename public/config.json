@@ -5,7 +5,7 @@
         "iconSmall": "images/iconSmall.jpg",
         "category": "flowcontrol"
     },
-    "type": "REST",
+    "type": "RestDecision",
     "lang": {
         "en-US": {
             "name": "Mathematical Splitter",
@@ -18,7 +18,7 @@
            "inArguments":[
 				{
                     "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
-                    
+
                 }									
 			],
           "outArguments": [],
@@ -64,7 +64,7 @@
       },
       "metaData": {
         "label": "True"
-      }
+      } 
     },
     {
       "arguments": {
@@ -75,7 +75,7 @@
       }
     },
       {
-      "arguments": {
+      "arguments": {  
         "branchResult": "Remainder"
       },
       "metaData": {

@@ -46,6 +46,16 @@ input[type=text], select {
 </head>
 
 <body>
+    <div id="message" style="display:none;">Loading DEs from your BU, wait for a sec...</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>
+        //When the page has loaded.
+        $( document ).ready(function(){
+            $('#message').fadeIn('slow', function(){
+               $('#message').delay(2000).fadeOut(); 
+            });
+        });
+        </script>
   <form action="https://pub.s7.exacttarget.com/wydzwfu3ras">
   Choose DE from the dropdown and click Next<br><br>
  <select id="selectNumber" name="selectNumber">

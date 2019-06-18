@@ -42,6 +42,23 @@ input[type=text], select {
   background-color: #f2f2f2;
   padding: 20px;
 }
+    .bg-image {
+  /* The image used */
+  background-image: url("https://st2.depositphotos.com/1963585/7142/v/950/depositphotos_71422931-stock-illustration-seamless-background-with-arithmetic-symbols.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 </style>
 </head>
 
@@ -57,12 +74,26 @@ input[type=text], select {
         });
         </script>
   <form action="https://pub.s7.exacttarget.com/wydzwfu3ras">
-  Choose DE from the dropdown and click Next<br><br>
- <select id="selectNumber" name="selectNumber">
-    <option value="selectNumber">SELECT</option>
+    <p><font size="4">Choose DE from the dropdown and click Next</font></p><br><br>
+ <select id="selectNumber" name="selectNumber" onchange="selectedDE()">
+    <option value="selectNumber" name="selectNumber">SELECT DE</option>
 </select><br><br>
+    Your Selected DE: <input type="text" id="dename12" name="DE_Name" value="DE Name" size="35" disabled />&nbsp;&nbsp;&nbsp;
+    Your Selected DE Key: <input type="text" id="dekey12" name="DE_Key" value="DE Key" size="40" disabled /><br><br>
     <input type="submit" value="Next">
   </form>
+  <script>
+    function selectedDE() {
+  var e = document.getElementById("selectNumber");
+  var strUser = e.options[e.selectedIndex].text;
+  var strUser1 = e.options[e.selectedIndex].value;
+      
+       var de_name = document.getElementById("dename12");
+       var de_key = document.getElementById("dekey12");
+      de_name.value = strUser;
+      de_key.value = strUser1;
+    }
+    </script>
   <script>
     var payload = '';
 payload += '<?xml version="1.0" encoding="utf-8"?>'

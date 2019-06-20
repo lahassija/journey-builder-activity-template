@@ -23,6 +23,7 @@
 
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
     <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -63,6 +64,7 @@ input[type=text], select {
 </head>
 
 <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div id="message" style="display:none;">Loading DEs from your BU, wait for a sec...</div>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script>
@@ -73,15 +75,23 @@ input[type=text], select {
             });
         });
         </script>
-  <form action="https://pub.s7.exacttarget.com/wydzwfu3ras">
+  <form action="https://pub.s7.exacttarget.com/wydzwfu3ras" method="GET">
     <p><font size="4">Choose DE from the dropdown and click Next</font></p><br>
  <select id="selectNumber" name="selectNumber" onchange="selectedDE()">
     <option value="selectNumber" name="selectNumber">SELECT DE</option>
-</select><br><br>
-    Your Selected DE:<br> <input type="text" id="dename12" name="DE_Name" value="DE Name" size="35" disabled /> <br><br>
-    Your Selected DE Key: <br><input type="text" id="dekey12" name="DE_Key" value="DE Key" size="40" disabled /><br><br>
-    <input type="submit" value="Next">
+</select><br><br>Your Selected DE: &nbsp;&nbsp;<br><br>
+     <select id="selectNumber1" name="selectNumber1">
+    <option value="selectNumber1" name="selectNumber1">SELECTED DE</option>
+</select>
+<br><br>
+    <input type="submit" value="Next"/>
   </form>
+  <script type="text/javascript">
+        $("#selectNumber").change(function(){
+  $("#selectNumber1 option").eq($(this).prop("selectedIndex")).prop("selected", "selected");
+});
+    </script>
+
   <script>
     function selectedDE() {
   var e = document.getElementById("selectNumber");
@@ -134,6 +144,7 @@ function myFunction(xml) {
   xmlDoc = xml.responseXML;
   txt = "";
   var select = document.getElementById("selectNumber");
+  var select1 = document.getElementById("selectNumber1");
   x = xmlDoc.getElementsByTagName("Name");
   y = xmlDoc.getElementsByTagName("CustomerKey");
   for (i = 0; i< x.length; i++) {
@@ -141,8 +152,14 @@ function myFunction(xml) {
     var opt = x[i].childNodes[0].nodeValue;
     var el = document.createElement("option");
     el.textContent = opt;
-    el.value = opt1;
+    el.setAttribute("value", opt1);
+ el.setAttribute("name", opt);
     select.appendChild(el);
+        var el1 = document.createElement("option");
+    el1.textContent = opt;
+    el1.setAttribute("value", opt);
+ el1.setAttribute("name", opt);
+    select1.appendChild(el1);
 }
 }
     </script>

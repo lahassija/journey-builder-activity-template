@@ -67,7 +67,7 @@ define([
 
     function save() {
         console.log("save called");
-        var dataExtensionName = $('#DEname').val(),
+        var dataExtensionName = $('#myField').val(),
         attribute1 = $('#attr1').val(),
         attribute2 = $('#attr2').val(),
         operator = $('#operator').val(),

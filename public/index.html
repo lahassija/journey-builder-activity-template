@@ -23,7 +23,6 @@
 
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
     <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -43,127 +42,37 @@ input[type=text], select {
   background-color: #f2f2f2;
   padding: 20px;
 }
-    .bg-image {
-  /* The image used */
-  background-image: url("https://st2.depositphotos.com/1963585/7142/v/950/depositphotos_71422931-stock-illustration-seamless-background-with-arithmetic-symbols.jpg");
-  
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  
-  /* Full height */
-  height: 100%; 
-  
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 </style>
 </head>
 
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-  <div id="message" style="display:none;">Loading DEs from your BU, wait for a sec...</div>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script>
-        //When the page has loaded.
-        $( document ).ready(function(){
-            $('#message').fadeIn('slow', function(){
-               $('#message').delay(2000).fadeOut(); 
-            });
-        });
-        </script>
-  <form action="https://pub.s7.exacttarget.com/wydzwfu3ras" method="GET">
-    <p><font size="4">Choose DE from the dropdown and click Next</font></p><br>
- <select id="selectNumber" name="selectNumber" onchange="selectedDE()">
-    <option value="selectNumber" name="selectNumber">SELECT DE</option>
-</select><br><br>Your Selected DE: &nbsp;&nbsp;<br><br>
-     <select id="selectNumber1" name="selectNumber1">
-    <option value="selectNumber1" name="selectNumber1">SELECTED DE</option>
-</select>
-<br><br>
-    <input type="submit" value="Next"/>
-  </form>
-  <script type="text/javascript">
-        $("#selectNumber").change(function(){
-  $("#selectNumber1 option").eq($(this).prop("selectedIndex")).prop("selected", "selected");
-});
-    </script>
-
-  <script>
-    function selectedDE() {
-  var e = document.getElementById("selectNumber");
-  var strUser = e.options[e.selectedIndex].text;
-  var strUser1 = e.options[e.selectedIndex].value;
-      
-       var de_name = document.getElementById("dename12");
-       var de_key = document.getElementById("dekey12");
-      de_name.value = strUser;
-      de_key.value = strUser1;
-    }
-    </script>
-  <script>
-    var payload = '';
-payload += '<?xml version="1.0" encoding="utf-8"?>'
-payload += '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">'
-payload += '<soapenv:Header>'
-payload += '<wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">'
-payload += '<wsse:UsernameToken wsu:Id="UsernameToken-32259181" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">'
-payload += '<wsse:Username>saybit1@deloitte.com</wsse:Username>'
-payload += '<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">avaya@4321</wsse:Password>'
-payload += '</wsse:UsernameToken>'
-payload += '</wsse:Security>'
-payload += '</soapenv:Header>'
-payload += '<soapenv:Body>'
-payload += '<RetrieveRequestMsg xmlns="http://exacttarget.com/wsdl/partnerAPI">'
-payload += '<RetrieveRequest>'
-payload += '<ObjectType>DataExtension</ObjectType>'
-payload += '<Properties>CustomerKey</Properties>'
-payload += '<Properties>Name</Properties>'
-payload += '<Properties>CategoryID</Properties>'
-payload += '</RetrieveRequest>'
-payload += '</RetrieveRequestMsg>'
-payload += '</soapenv:Body>'
-payload += '</soapenv:Envelope>'
-console.log(payload);
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open('POST', 'https://webservice.s7.exacttarget.com/Service.asmx', true);
-    xmlhttp.setRequestHeader('Content-Type', 'text/xml');
-      xmlhttp.setRequestHeader('SOAPAction', 'Retrieve');
-      xmlhttp.send(payload);
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      myFunction(this);
-    }
-  };
-
-function myFunction(xml) {
-  var x,y, i,j, xmlDoc, txt;
-  xmlDoc = xml.responseXML;
-  txt = "";
-  var select = document.getElementById("selectNumber");
-  var select1 = document.getElementById("selectNumber1");
-  x = xmlDoc.getElementsByTagName("Name");
-  y = xmlDoc.getElementsByTagName("CustomerKey");
-  for (i = 0; i< x.length; i++) {
-    var opt1 = y[i].childNodes[0].nodeValue;
-    var opt = x[i].childNodes[0].nodeValue;
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.setAttribute("value", opt1);
- el.setAttribute("name", opt);
-    select.appendChild(el);
-        var el1 = document.createElement("option");
-    el1.textContent = opt;
-    el1.setAttribute("value", opt);
- el1.setAttribute("name", opt);
-    select1.appendChild(el1);
-}
-}
-    </script>
+    <div class="container">
+    <form action="#" METHOD="POST">
+        <label for="DEname">Data Extension Name:</label><br>
+        <input type="text" placeholder="Enter DE Name" id="DEname"><br>
+        <label for="attr1">Attribute Name 1:</label><br>
+        <input type="text" placeholder="Enter Attribute 1" id="attr1"><br>
+        <label for="operator">Select the Arithmetic Operator:</label><br>
+                <select id="operator">
+                                <option value="plus">+</option>
+                                <option value="minus">-</option>
+                                <option value="multiply">*</option>
+                                <option value="divide">/</option>
+                            </select><br>
+        <label for="attr2">Attribute Name 2:</label><br>
+        <input type="text" placeholder="Enter Attribute 2" id="attr2"><br>
+        <label for="operand">Select the Logical Operator:</label><br>
+                            <select id="operand">
+                                <option value="gt">&gt;</option>
+                                <option value="lt">&lt;</option>
+                                <option value="gte">&gt;=</option>
+                                <option value="lte">&lt;=</option>
+                                <option value="equals">=</option>
+                            </select><br>
+        <label for="fvalue">Provide the Final Value to compare:</label><br>
+        <input type="text" placeholder="Final Value" id="fvalue"><br>                    
+    </form>
+    </div>
 </body>
 
 </html>

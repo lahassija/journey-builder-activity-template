@@ -32,7 +32,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "E8rFoHOSA_dSkNtTy8a3lLLi6Cg_u29vU4omHnGUkFqGXOEOo3IlIJ6ZXDZOlcXwWgXG28ddrue1o1VcSK1FxX_LfUBzvFz9QCgBXILTC8wgOT3pvxAVI4LI31NzuX5t_G-rra9Dls4HZDjx2Mn3-HYKLmpfAbc7Q33USRzM-9MQb0aRdxeu2yrKdk3JXfRJD7mkpknEkzwxGj0UkNLO2yq1mDr-FIX07THwAWeyc4ZYkSInomK-9lLdL-kfhg2",
+      "applicationExtensionKey": "5f20b68c-fe40-4e14-b593-913a8ac2f79c",
       "save": {
         "url": "https://mc-custombuilder.herokuapp.com/journeybuilder/save",
           "verb": "POST",

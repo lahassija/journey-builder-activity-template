@@ -22,7 +22,7 @@
                 }                 
       ],
           "outArguments": [],
-          "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/execute",
+          "url": "https://mc-custombuilder.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -32,24 +32,24 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "P9owd3RwpdwWmAwCxb6YM0oRpr1xaW8XnrKjdK6VeyYgsKERnVvnHdgKcWYWrDQEGIUIKcA5_UVwVw_yMP3-GB16uuN8dyastZiZOohdYI0chF1sl2FF1-JsobnY8Nj8lU7MM-92d6-p-YvTR8FQwHvNrs5WIAiC_DuD2T28IT5DO_5_6ASUYX1ABFsv89G8THqDu_q9jh6t0N3-PLJ_HNtYXf-wVCt03mn2bfCgqjd_cBC5ts5ncwQObi7okw2",
+      "applicationExtensionKey": "E8rFoHOSA_dSkNtTy8a3lLLi6Cg_u29vU4omHnGUkFqGXOEOo3IlIJ6ZXDZOlcXwWgXG28ddrue1o1VcSK1FxX_LfUBzvFz9QCgBXILTC8wgOT3pvxAVI4LI31NzuX5t_G-rra9Dls4HZDjx2Mn3-HYKLmpfAbc7Q33USRzM-9MQb0aRdxeu2yrKdk3JXfRJD7mkpknEkzwxGj0UkNLO2yq1mDr-FIX07THwAWeyc4ZYkSInomK-9lLdL-kfhg2",
       "save": {
-        "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/save",
+        "url": "https://mc-custombuilder.herokuapp.com/journeybuilder/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/publish",
+        "url": "https://mc-custombuilder.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/stop",
+        "url": "https://mc-custombuilder.herokuapp.com/journeybuilder/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://journeyuilderapp.herokuapp.com/journeybuilder/validate",
+        "url": "https://mc-custombuilder.herokuapp.com/journeybuilder/validate",
         "verb": "POST",
         "useJwt": true
       }
